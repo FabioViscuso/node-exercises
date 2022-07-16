@@ -11,6 +11,6 @@ const testedApp = supertest(app)
 test("GET /", async () => {
     const response = await testedApp.get("/")
         .expect(200)
-        .expect('Content-Type', 'application/json')
-    expect(response.body).toEqual({ location: 'Mars', message: 'Hello from another planet!' })
+        .expect('Content-Type', 'text/html')
+    expect(response.text).toEqual('<html><body>Welcome to the World Wide Web!</body></html>')
 })

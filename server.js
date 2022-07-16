@@ -4,8 +4,8 @@ function serverApp() {
     return createServer((req, res) => {
         console.log("request received");
         res.statusCode = 200;
-        res.setHeader("Content-Type", "application/json");
-        res.end(JSON.stringify({ location: 'Mars', message: 'Hello from another planet!' }));
+        res.setHeader("Content-Type", "text/html");
+        res.end('<html><body>Welcome to the World Wide Web!</body></html>');
     })
 }
 
